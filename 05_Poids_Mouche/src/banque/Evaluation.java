@@ -6,15 +6,16 @@ public class Evaluation
     private Question q1;
     private Question q2;
 
-    public Evaluation(int noEvaluation, Question q1, Question q2)
+    public Evaluation(int noEvaluation, char q1, char q2)
     {
         this.noEvaluation = noEvaluation;
-        this.q1 = q1;
-        this.q2 = q2;
+        this.q1 = null;
+        this.q2 = null;
     }
 
     public String toString()
     {
+
         return null;
     }
 }

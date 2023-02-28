@@ -11,12 +11,12 @@ public abstract class Question {
 
     protected String getDescription()
     {
-        return null;
+        return this.description;
     }
 
     public String toString()
     {
-        return null;
+        return toString();
     }
 
 }

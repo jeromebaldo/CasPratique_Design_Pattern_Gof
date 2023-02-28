@@ -6,7 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         SystemeExploitation se = new SystemeExploitation();
         int choix = 0;
-        do{
+        do
+        {
             se.afficherInfo();
             se.afficherCommande();
             choix = getChoix(sc);
@@ -14,8 +15,8 @@ public class Main {
         }
         while(choix != 9);
     }
-    public static int getChoix(Scanner sc){
+    private static int getChoix(Scanner sc){
         System.out.print("\nVotre choix (9 pour quitter): ");
-        return 0;
+        return sc.nextInt();
     }
 }

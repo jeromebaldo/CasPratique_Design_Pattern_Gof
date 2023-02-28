@@ -14,6 +14,6 @@ public class Evaluation {
     }
 
     public String toString() {
-        return "Evaluation n°" + noEvaluation + ":\n" + "Question 1: " + q1.getDescription() + "\nQuestion 2: " + q2.getDescription();
+        return "Evaluation #" + noEvaluation + ":\n" + "q1: Question{" + q1.getDescription() + "}\nq2: Question{" + q2.getDescription() + "}";
     }
 }

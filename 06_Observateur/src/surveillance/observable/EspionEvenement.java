@@ -4,23 +4,43 @@ import surveillance.Evenement;
 import surveillance.Observable;
 import surveillance.Observateur;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class EspionEvenement implements Observable
 {
-    private Observateur observateurs;
+    private List<Observateur> observateurs = new ArrayList<Observateur>();
     private static Observable observable;
 
-    private EspionEvenement() {
+    static {
+        observable = new EspionEvenement();
     }
 
-    public void alerter(Evenement evenement){}
+    private EspionEvenement()
+    {
+    }
 
-    @Override
-    public void ajouterObservateur(Observateur observateur) {
-
+    public void alerter(Evenement evenement)
+    {
+        for (Observateur obs : observateurs)
+        {
+            obs.alerter(evenement);
+        }
     }
 
     @Override
-    public void supprimerObservateur(Observateur observateur) {
+    public void ajouterObservateur(Observateur observateur)
+    {
+        observateurs.add(observateur);
+    }
 
+    @Override
+    public void supprimerObservateur(Observateur observateur)
+    {
+        observateurs.remove(observateur);
+    }
+
+    public static Observable getObservable() {
+        return observable;
     }
 }

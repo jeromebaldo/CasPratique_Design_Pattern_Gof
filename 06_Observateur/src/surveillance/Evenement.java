@@ -12,6 +12,7 @@ public class Evenement
 
     public String toString()
     {
-        return toString();
+        String etat = this.description +"\\" + Integer.toString(this.niveauUrgence) + "\\";
+        return etat;
     }
 }

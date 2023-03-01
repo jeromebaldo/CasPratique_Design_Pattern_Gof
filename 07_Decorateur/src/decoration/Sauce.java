@@ -5,7 +5,7 @@ public class Sauce extends MalbouffeDecorateur
 
     public Sauce(Malbouffe malbouffe)
     {
-        super(malbouffe);
+       super(malbouffe);
     }
 
     public String getDescription()

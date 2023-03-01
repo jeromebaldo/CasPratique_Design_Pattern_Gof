@@ -1,10 +1,12 @@
 package decoration;
 
-public class Poutine implements Malbouffe{
+public class Poutine implements Malbouffe {
 
     @Override
     public String getDescription()
     {
-        return "POUTINE";
+        String intitulé = "POUTINE";
+
+        return intitulé;
     }
 }

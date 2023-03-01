@@ -11,6 +11,6 @@ public abstract class MalbouffeDecorateur
 
     public String getDescription()
     {
-        return null;
+        return this.malbouffe.getDescription();
     }
 }

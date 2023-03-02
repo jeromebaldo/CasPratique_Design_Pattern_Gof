@@ -13,7 +13,10 @@ public class Controleur
         this.acteur = acteur;
     }
 
-    public void reinitialiserCommandes(){}
+    public void reinitialiserCommandes()
+    {
+
+    }
 
     public void setCommande(Bouton bouton, Commande commande){}
 

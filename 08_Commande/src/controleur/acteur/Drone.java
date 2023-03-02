@@ -4,22 +4,26 @@ public class Drone implements Acteur
 {
 
     @Override
-    public void sauter() {
-
+    public void sauter()
+    {
+        System.out.println("DRONE-SAUTER");
     }
 
     @Override
-    public void tirer() {
-
+    public void tirer()
+    {
+        System.out.println("DRONE-TIRER");
     }
 
     @Override
-    public void esquiver() {
-
+    public void esquiver()
+    {
+        System.out.println("DRONE-ESQUIVER");
     }
 
     @Override
-    public void changerArme() {
-
+    public void changerArme()
+    {
+        System.out.println("DRONE-CHANGER_ARME");
     }
 }

@@ -5,13 +5,11 @@ import controleur.acteur.Acteur;
 public class CommandeEsquive implements Commande
 {
     @Override
-    public void executer(Acteur acteur)
-    {
-
-    }
+    public void executer(Acteur acteur){acteur.esquiver();}
 
     public String toString()
     {
-        return null;
+        String intitule = "{ESQUIVE}";
+        return intitule;
     }
 }

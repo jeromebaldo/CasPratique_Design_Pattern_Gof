@@ -6,13 +6,11 @@ public class CommandeTir implements Commande
 {
 
     @Override
-    public void executer(Acteur acteur)
-    {
-
-    }
+    public void executer(Acteur acteur){acteur.tirer();}
 
     public String toString()
     {
-        return null;
+        String intitule = "{TIR}";
+        return intitule;
     }
 }

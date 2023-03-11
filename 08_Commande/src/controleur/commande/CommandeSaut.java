@@ -4,13 +4,11 @@ import controleur.acteur.Acteur;
 
 public class CommandeSaut implements Commande{
     @Override
-    public void executer(Acteur acteur)
-    {
-
-    }
+    public void executer(Acteur acteur){acteur.sauter();}
 
     public String toString()
     {
-        return null;
+        String intitule = "{SAUT}";
+        return intitule;
     }
 }

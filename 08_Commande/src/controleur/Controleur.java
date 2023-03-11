@@ -3,7 +3,8 @@ package controleur;
 import controleur.acteur.Acteur;
 import controleur.commande.*;
 
-public class Controleur {
+public class Controleur
+{
     private Commande[][] commandes;
     private Acteur acteur;
 
@@ -60,5 +61,4 @@ public class Controleur {
     {
         this.acteur = acteur;
     }
-
 }

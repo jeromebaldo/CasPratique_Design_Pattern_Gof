@@ -18,15 +18,19 @@ public class EspionEvenement implements Observable
 
     private EspionEvenement()
     {
+        ThreadEvenement threadEvenement = new ThreadEvenement(this);
+        threadEvenement.start();
     }
 
     public void alerter(Evenement evenement)
     {
-        for (Observateur obs : observateurs)
+        List<Observateur> copieObservateurs = new ArrayList<>(observateurs); // Copie de la liste originale
+        for (Observateur obs : copieObservateurs)
         {
             obs.alerter(evenement);
         }
     }
+
 
     @Override
     public void ajouterObservateur(Observateur observateur)

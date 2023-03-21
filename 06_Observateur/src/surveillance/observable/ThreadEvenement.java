@@ -6,9 +6,9 @@ public class ThreadEvenement extends Thread
 {
     private EspionEvenement espion;
 
-    public ThreadEvenement(EspionEvenement espion)
+    public ThreadEvenement(EspionEvenement espionEvenement)
     {
-        this.espion = espion;
+        this.espion = espionEvenement;
     }
 
     public void run()
@@ -24,6 +24,7 @@ public class ThreadEvenement extends Thread
                 e.printStackTrace();
             }
             numThread++;
+            System.out.println("numThread : "+ numThread);
         }
     }
 }

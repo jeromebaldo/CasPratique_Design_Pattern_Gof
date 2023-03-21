@@ -8,14 +8,14 @@ public class ServeurVMWare extends ServeurMV {
 
     public int sessionID;
 
-    public ServeurVMWare() throws SessionException {
-
+    public ServeurVMWare() throws SessionException
+    {
         sessionID = 0;
     }
 
     @Override
-    protected Session creerSession() {
-
+    protected Session creerSession()
+    {
         return new SessionVMWare(sessionID++);
     }
 }

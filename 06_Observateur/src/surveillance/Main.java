@@ -10,15 +10,10 @@ import surveillance.observateur.Support;
 public class Main {
     public static void main(String[] args) throws InterruptedException
     {
-        EspionEvenement espionEvenement = (EspionEvenement) EspionEvenement.getObservable(); //création d'une instance de EspionEvenement à partir de la méthode statique getObservable()
-        ThreadEvenement threadEvenement = new ThreadEvenement(espionEvenement);
-
         Log log = new Log(50);
         Rapport rapport = new Rapport();
         Support support = new Support();
         GenerateurBillet generateurBillet = new GenerateurBillet();
-
-        threadEvenement.run();
 
         Thread.sleep(5000);
         EspionEvenement.getObservable().supprimerObservateur(log);

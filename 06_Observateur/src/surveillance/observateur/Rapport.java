@@ -16,35 +16,23 @@ public class Rapport implements Observateur {
     @Override
     public void alerter(Evenement evenement)
     {
-        ReentrantLock mutex = new ReentrantLock();
-        mutex.lock();
-
-        try
+        String etat = evenement.toString();
+        String[] infoEven = new String[2];
+        String membre = "";
+        int j = 0;
+        for(int i = 0; i < etat.length(); i++)
         {
-            String etat = evenement.toString();
-            String[] infoEven = new String[2];
-            String membre = "";
-            int j = 0;
-            for(int i = 0; i < etat.length(); i++)
+            if(etat.charAt(i) == '\\')
             {
-                if(etat.charAt(i) == '\\')
-                {
-                    infoEven[j] = membre;
-                    membre = "";
-                    j++;
-                }
-                else
-                {
-                    membre += etat.charAt(i);//concatene
-                }
+                infoEven[j] = membre;
+                membre = "";
+                j++;
             }
-            System.out.println("RAPPORT : " + infoEven[0]);
+            else
+            {
+                membre += etat.charAt(i);//concatene
+            }
         }
-        finally
-        {
-            mutex.unlock();
-        }
-
-
+        System.out.println("RAPPORT : " + infoEven[0]);
     }
 }

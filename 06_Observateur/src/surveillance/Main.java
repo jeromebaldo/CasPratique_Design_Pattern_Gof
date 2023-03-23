@@ -1,7 +1,6 @@
 package surveillance;
 
 import surveillance.observable.EspionEvenement;
-import surveillance.observable.ThreadEvenement;
 import surveillance.observateur.GenerateurBillet;
 import surveillance.observateur.Log;
 import surveillance.observateur.Rapport;

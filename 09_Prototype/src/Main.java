@@ -14,8 +14,8 @@ public class Main {
 
         //genereTribut();
         //genereTributClone();
-        //genereHorde();
-        //genereHordeClone();
+        genereHorde();
+        genereHordeClone();
     }
     private static void genereHorde()
     {

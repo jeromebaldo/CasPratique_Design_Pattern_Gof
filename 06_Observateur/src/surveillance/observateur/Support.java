@@ -16,40 +16,27 @@ public class Support implements Observateur {
     @Override
     public void alerter(Evenement evenement)
     {
-        ReentrantLock mutex = new ReentrantLock();
-        mutex.lock();
-
-        try
+        String etat = evenement.toString();
+        String[] infoEven = new String[2];
+        String membre = "";
+        int j = 0;
+        for(int i = 0; i < etat.length(); i++)
         {
-            String etat = evenement.toString();
-            String[] infoEven = new String[2];
-            String membre = "";
-            int j = 0;
-            for(int i = 0; i < etat.length(); i++)
+            if(etat.charAt(i) == '\\')
             {
-                if(etat.charAt(i) == '\\')
-                {
-                    infoEven[j] = membre;
-                    membre = "";
-                    j++;
-                }
-                else
-                {
-                    membre += etat.charAt(i);
-                }
+                infoEven[j] = membre;
+                membre = "";
+                j++;
             }
-            int valeur = Integer.parseInt(infoEven[1]);
-            if(valeur > 90)//verification si supérieur à 90
+            else
             {
-                System.out.println("SUPPORT URGENCE : Evenement{niveauUrgence="
-                        +infoEven[1] + ", description='" + infoEven[0] + "'}");
+                membre += etat.charAt(i);
             }
         }
-        finally
+        int valeur = Integer.parseInt(infoEven[1]);
+        if(valeur > 90)//verification si supérieur à 90
         {
-            mutex.unlock();
+            System.out.println("SUPPORT URGENCE : Evenement{niveauUrgence=" +infoEven[1] + ", description='" + infoEven[0] + "'}");
         }
-
-
     }
 }

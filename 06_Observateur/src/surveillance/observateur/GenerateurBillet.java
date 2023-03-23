@@ -17,38 +17,27 @@ public class GenerateurBillet implements Observateur
     @Override
     public void alerter(Evenement evenement)
     {
-        ReentrantLock mutex = new ReentrantLock();
-        mutex.lock();
-
-        try
+        String etat = evenement.toString();
+        String[] infoEven = new String[2];
+        String membre = "";
+        int j = 0;
+        for(int i = 0; i < etat.length(); i++)
         {
-            String etat = evenement.toString();
-            String[] infoEven = new String[2];
-            String membre = "";
-            int j = 0;
-            for(int i = 0; i < etat.length(); i++)
+            if(etat.charAt(i) == '\\')
             {
-                if(etat.charAt(i) == '\\')
-                {
-                    infoEven[j] = membre;
-                    membre = "";
-                    j++;
-                } else {
-                    membre += etat.charAt(i);
-                }
+                infoEven[j] = membre;
+                membre = "";
+                j++;
             }
-            if(infoEven[0].equals("Bris majeur"))//comparé pour  savoir si c'est un bris majeur
+            else
             {
-                System.out.println("OUVERTURE D'UN BILLET: Evenement{niveauUrgence="
-                        +infoEven[1] + ", description='" + infoEven[0] + "'}");
+                membre += etat.charAt(i);
             }
-        } finally
-        {
-            mutex.unlock();
         }
-
-
-
-
+        if(infoEven[0].equals("Bris majeur"))//comparé pour  savoir si c'est un bris majeur
+        {
+            System.out.println("OUVERTURE D'UN BILLET: Evenement{niveauUrgence="
+                    +infoEven[1] + ", description='" + infoEven[0] + "'}");
+        }
     }
 }

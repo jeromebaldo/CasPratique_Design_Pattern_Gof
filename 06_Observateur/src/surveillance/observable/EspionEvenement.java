@@ -38,7 +38,6 @@ public class EspionEvenement implements Observable {
     public void alerter(Evenement evenement)
     {
         mutex.lock();
-
         try
         {
             for (Observateur obs : observateurs)

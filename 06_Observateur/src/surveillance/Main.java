@@ -16,6 +16,7 @@ public class Main {
         GenerateurBillet generateurBillet = new GenerateurBillet();
 
         Thread.sleep(5000);
+
         EspionEvenement.getObservable().supprimerObservateur(log);
         EspionEvenement.getObservable().supprimerObservateur(rapport);
         EspionEvenement.getObservable().supprimerObservateur(support);

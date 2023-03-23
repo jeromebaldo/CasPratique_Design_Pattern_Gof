@@ -24,7 +24,7 @@ public class Main {
 
         Vendeur vendeur = new Vendeur(constructeurContrat);
 
-        Contrat contrat = vendeur.construit("Jérôme ");
+        Contrat contrat = vendeur.construit("Jérôme");
         contrat.imprime();
     }
 }

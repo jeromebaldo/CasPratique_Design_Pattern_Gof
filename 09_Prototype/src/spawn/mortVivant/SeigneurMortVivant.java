@@ -9,7 +9,7 @@ public class SeigneurMortVivant extends Monstre
 
     public SeigneurMortVivant(String nomFaction, int nbrSort)
     {
-        super("SEIGNEUR_MORT_VIVANT");
+        super("SEIGNEUR_MORT_VIVANT");//deux affichages d'attributs
         this.nomFaction = nomFaction;
         this.nbrSort = nbrSort;
     }

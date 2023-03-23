@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01_Singleton/01_Singleton.iml" filepath="$PROJECT_DIR$/01_Singleton/01_Singleton.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02_Fabrique_Abstraite/02_Fabrique_Abstraite.iml" filepath="$PROJECT_DIR$/02_Fabrique_Abstraite/02_Fabrique_Abstraite.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03_Monteur_directeur/03_Monteur_directeur.iml" filepath="$PROJECT_DIR$/03_Monteur_directeur/03_Monteur_directeur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/04_Etat/04_Etat.iml" filepath="$PROJECT_DIR$/04_Etat/04_Etat.iml" />
+      <module fileurl="file://$PROJECT_DIR$/05_Poids_Mouche/05_Poids_Mouche.iml" filepath="$PROJECT_DIR$/05_Poids_Mouche/05_Poids_Mouche.iml" />
+      <module fileurl="file://$PROJECT_DIR$/06_Observateur/06_Observateur.iml" filepath="$PROJECT_DIR$/06_Observateur/06_Observateur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/07_Decorateur/07_Decorateur.iml" filepath="$PROJECT_DIR$/07_Decorateur/07_Decorateur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/08_Commande/08_Commande.iml" filepath="$PROJECT_DIR$/08_Commande/08_Commande.iml" />
+      <module fileurl="file://$PROJECT_DIR$/09_Prototype/09_Prototype.iml" filepath="$PROJECT_DIR$/09_Prototype/09_Prototype.iml" />
+      <module fileurl="file://$PROJECT_DIR$/10_Pool/10_Pool.iml" filepath="$PROJECT_DIR$/10_Pool/10_Pool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/AtelConcept_BALJ17058609.iml" filepath="$PROJECT_DIR$/.idea/AtelConcept_BALJ17058609.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Atelier/Atelier.iml" filepath="$PROJECT_DIR$/Atelier/Atelier.iml" />
+    </modules>
+  </component>
+</project>

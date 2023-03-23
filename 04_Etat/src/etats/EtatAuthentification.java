@@ -18,7 +18,7 @@ public class EtatAuthentification implements Etat{
             return new EtatUtilisation();
         }
 
-        return this;
+        return this; //si pas la commande adequate
     }
 
     @Override

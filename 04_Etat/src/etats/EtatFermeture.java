@@ -8,7 +8,7 @@ public class EtatFermeture implements Etat{
         {
             return new EtatEteint();
         }
-        return this;
+        return this; //si pas la commande adequate
     }
 
     @Override

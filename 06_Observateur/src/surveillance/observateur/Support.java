@@ -4,6 +4,8 @@ import surveillance.Evenement;
 import surveillance.Observateur;
 import surveillance.observable.EspionEvenement;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Support implements Observateur {
 
     public Support()
@@ -14,25 +16,40 @@ public class Support implements Observateur {
     @Override
     public void alerter(Evenement evenement)
     {
-        String etat = evenement.toString();
-        String[] infoEven = new String[2];
-        String membre = "";
-        int j = 0;
-        for(int i = 0; i < etat.length(); i++)
+        ReentrantLock mutex = new ReentrantLock();
+        mutex.lock();
+
+        try
         {
-            if(etat.charAt(i) == '\\') {
-                infoEven[j] = membre;
-                membre = "";
-                j++;
-            } else {
-                membre += etat.charAt(i);
+            String etat = evenement.toString();
+            String[] infoEven = new String[2];
+            String membre = "";
+            int j = 0;
+            for(int i = 0; i < etat.length(); i++)
+            {
+                if(etat.charAt(i) == '\\')
+                {
+                    infoEven[j] = membre;
+                    membre = "";
+                    j++;
+                }
+                else
+                {
+                    membre += etat.charAt(i);
+                }
+            }
+            int valeur = Integer.parseInt(infoEven[1]);
+            if(valeur > 90)//verification si supérieur à 90
+            {
+                System.out.println("SUPPORT URGENCE : Evenement{niveauUrgence="
+                        +infoEven[1] + ", description='" + infoEven[0] + "'}");
             }
         }
-        int valeur = Integer.parseInt(infoEven[1]);
-        if(valeur > 90)
+        finally
         {
-            System.out.println("SUPPORT URGENCE : Evenement{niveauUrgence="
-                    +infoEven[1] + ", description='" + infoEven[0] + "'}");
+            mutex.unlock();
         }
+
+
     }
 }

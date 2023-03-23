@@ -16,7 +16,7 @@ public class EtatUtilisation implements Etat{
         {
             return new EtatFermeture();
         }
-        return this;
+        return this; //si pas la commande adequate
     }
 
     @Override

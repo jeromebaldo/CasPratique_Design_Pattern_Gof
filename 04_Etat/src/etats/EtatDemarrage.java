@@ -13,7 +13,7 @@ public class EtatDemarrage implements Etat{
             return new EtatAuthentification();
         }
 
-        return this;
+        return this;//si pas la commande adequate
     }
 
     @Override

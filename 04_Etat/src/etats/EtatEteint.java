@@ -8,7 +8,7 @@ public class EtatEteint implements Etat{
         {
             return new EtatDemarrage();
         }
-        return this;
+        return this; //si pas la commande adequate
     }
 
     @Override

@@ -1,6 +1,7 @@
 package directeur;
 
 import constructeur.ConstructeurContrat;
+import constructeur.ConstructeurContratPdf;
 import constructeur.Contrat;
 
 public class Vendeur {

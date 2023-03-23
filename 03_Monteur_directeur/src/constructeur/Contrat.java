@@ -12,5 +12,5 @@ public abstract class Contrat {
     }
 
     public void ajouteDocument(String document){}
-    public void imprime(){ }
+    public void imprime(){}
 }

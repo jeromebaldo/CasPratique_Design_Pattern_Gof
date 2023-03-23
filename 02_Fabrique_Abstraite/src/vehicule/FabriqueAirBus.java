@@ -16,8 +16,9 @@ public class FabriqueAirBus implements FabriqueVehicule
     }
 
     @Override
-    public Avion createAvion(String modele) {
-
+    public Avion createAvion(String modele)
+    {
+        //tu as autorisé à mettre du switch
         Avion avion = null;
         switch(modele)
         {

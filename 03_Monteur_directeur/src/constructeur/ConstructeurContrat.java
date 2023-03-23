@@ -1,7 +1,6 @@
 package constructeur;
 
 public abstract class ConstructeurContrat {
-
     protected Contrat contrat;
 
     public void construitBonDeCommande(String nomClient){}

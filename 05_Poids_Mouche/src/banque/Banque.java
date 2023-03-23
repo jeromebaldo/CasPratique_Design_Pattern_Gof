@@ -14,20 +14,27 @@ public class Banque {
     }
 
     public Question getQuestion(char id) {
-        if (questions.containsKey(id)) {
+        if (questions.containsKey(id))
+        {
             return questions.get(id);
-        } else {
+        }
+        else
+        {
             return chargerQuestion(id);
         }
     }
 
-    private Question chargerQuestion(char id) {
+    private Question chargerQuestion(char id)
+    {
         Question question = null;
-        try {
-            Class<?> classeQuestion = Class.forName("banque.Question" + id);
+        try
+        {
+            Class<Question> classeQuestion = (Class<Question>) Class.forName("banque.Question" + id);
             question = (Question) classeQuestion.getDeclaredConstructor(String.class).newInstance("");
             questions.put(id, question);
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
         return question;

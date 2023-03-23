@@ -15,7 +15,8 @@ public class Main {
         }
         while(choix != 9);
     }
-    private static int getChoix(Scanner sc){
+    private static int getChoix(Scanner sc)
+    {
         System.out.print("\nVotre choix (9 pour quitter): ");
         return sc.nextInt();
     }

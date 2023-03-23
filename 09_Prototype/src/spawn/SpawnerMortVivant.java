@@ -14,7 +14,7 @@ public class SpawnerMortVivant extends Spawner
     @Override
     protected void chargerMonstres()
     {
-        ajouterMonstre(SeigneurMortVivant.class, new SeigneurMortVivant("les morts vivants", 5));
+        ajouterMonstre(SeigneurMortVivant.class, new SeigneurMortVivant("les liches spawner", 5));
         ajouterMonstre(Squelette.class, new Squelette());
         ajouterMonstre(Zombie.class, new Zombie(true));
     }

@@ -1,6 +1,7 @@
 package decoration;
 
-public class Ketchup extends MalbouffeDecorateur implements Malbouffe{
+public class Ketchup extends MalbouffeDecorateur
+{
 
     public Ketchup(Malbouffe malbouffe)
     {

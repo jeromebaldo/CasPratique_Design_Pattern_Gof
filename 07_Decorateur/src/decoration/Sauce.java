@@ -1,6 +1,6 @@
 package decoration;
 
-public class Sauce extends MalbouffeDecorateur implements Malbouffe
+public class Sauce extends MalbouffeDecorateur
 {
 
     public Sauce(Malbouffe malbouffe)

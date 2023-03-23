@@ -22,7 +22,6 @@ public class Main
             System.out.println(evaluation);
         }
     }
-
     private static char genererIdQuestion()
     {
         return (char) (ThreadLocalRandom.current().nextInt(65, 68));
